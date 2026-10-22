@@ -1,0 +1,71 @@
+.mascot {
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.mascot__bob {
+  animation: mascot-bob 4.5s ease-in-out infinite;
+  transform-origin: 60px 100px;
+}
+
+.mascot__eyes {
+  animation: mascot-look 7s ease-in-out infinite;
+}
+
+.mascot__eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: mascot-blink 5s infinite;
+}
+
+.mascot__antenna {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: mascot-antenna 2.4s ease-in-out infinite;
+}
+
+.mascot__halo {
+  animation: mascot-halo 3s ease-in-out infinite;
+}
+
+/* Thinking: eyes drift up and to the side */
+.mascot--think .mascot__eyes {
+  animation: mascot-think 2.2s ease-in-out infinite;
+}
+
+/* Happy: squinted eyes */
+.mascot--happy .mascot__eye {
+  animation: none;
+  transform: scaleY(0.45);
+}
+
+@keyframes mascot-bob {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-1.5deg); }
+}
+
+@keyframes mascot-blink {
+  0%, 44%, 48%, 100% { transform: scaleY(1); }
+  46% { transform: scaleY(0.1); }
+}
+
+@keyframes mascot-look {
+  0%, 30%, 100% { transform: translateX(0); }
+  38%, 52% { transform: translateX(5px); }
+  60%, 74% { transform: translateX(-5px); }
+}
+
+@keyframes mascot-think {
+  0%, 100% { transform: translate(3px, -3px); }
+  50% { transform: translate(-3px, -4px); }
+}
+
+@keyframes mascot-antenna {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-10deg); }
+}
+
+@keyframes mascot-halo {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
