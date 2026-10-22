@@ -1,0 +1,125 @@
+.pricing-hero {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  max-width: 44rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.pricing-h1 {
+  margin-top: 1rem;
+}
+
+.pricing-toggle {
+  margin-top: 1.75rem;
+}
+
+.pricing-card {
+  position: relative;
+  animation: hd-in 0.5s ease both;
+}
+
+.pricing-card.current {
+  border-color: rgba(74, 222, 128, 0.45);
+}
+
+.pcard-name {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.pricing-card .pcard-price {
+  margin: 0.75rem 0 1rem;
+}
+
+.plan-flag {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.25rem 0.8rem;
+  border-radius: 999px;
+  background: var(--lemon);
+  color: var(--on-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pack-credits {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.pack-credits span {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.plans-note {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.link-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--muted);
+  font-size: inherit;
+  text-decoration: underline;
+}
+
+.credit-scale {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.credit-tile {
+  display: grid;
+  gap: 0.4rem;
+  padding: 1.5rem;
+  border-radius: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.credit-len {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.credit-amt {
+  font-size: 1.9rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.credit-amt small {
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0;
+}
+
+.credit-bar {
+  height: 6px;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.credit-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--gradient);
+  animation: hd-grow 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  transform-origin: left;
+}
+
+@media (max-width: 900px) {
+  .credit-scale { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
