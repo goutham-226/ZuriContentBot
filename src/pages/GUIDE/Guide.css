@@ -1,0 +1,57 @@
+.guide-steps {
+  list-style: none;
+  max-width: 48rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.guide-step {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+}
+
+.guide-step h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.guide-step p {
+  color: var(--muted);
+}
+
+.guide-step a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.guide-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.guide-playbook {
+  margin-top: clamp(4rem, 8vw, 6rem);
+}
+
+.guide-playbook .grid-2 {
+  margin-top: 1.5rem;
+}
+
+.guide-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 3rem;
+}
